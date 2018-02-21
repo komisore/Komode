@@ -32,8 +32,10 @@ public class Project3Test
         //capabilities.setCapability("deviceName", "FA63WBN00149");
         //String appPath = "/Users/kazeemomisore/Documents/Applications/Appium/APKs/Koomot/komoot_7.0.2.apk";
         //capabilities.setCapability("app", appPath);
+        //System.out.println("Hello");
+        //System.out.println(System.getenv("TESTOBJECT_API_KEY"));
         capabilities.setCapability("app", "komoot");
-        capabilities.setCapability("testobject_api_key", "1C72C04D21AC43CF96BB1A0B4EBDD2CA");
+        capabilities.setCapability("testobject_api_key", System.getenv("TESTOBJECT_API_KEY"));
         capabilities.setCapability("appWaitActivity", "de.komoot.android.app.JoinKomootActivity");
         //  driver = new RemoteWebDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);
         try {
